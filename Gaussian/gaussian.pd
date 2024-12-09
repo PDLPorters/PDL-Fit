@@ -101,6 +101,14 @@ use warnings;
 
 EOD
 
+pp_addhdr(<<'EOF');
+#define NPAR 3
+void lqsortD (double* xx, int a, int b);
+int marquardt (int npoints, int npar, double*x, double *y,
+                      double* sig, double par[NPAR], double* r,
+                      double a[NPAR][NPAR]);
+EOF
+
 for my $name ('fitgauss1d','fitgauss1dr') {
 pp_def($name,
 	Pars => 'xval(n); data(n); '.($name eq 'fitgauss1dr' ? '' : '[o]xcentre();'). 
@@ -108,7 +116,6 @@ pp_def($name,
 	         [o]background();int [o]err(); [o]datafit(n); 
 	         [t]sig(n);  [t]ytmp(n); [t]yytmp(n); [t]rtmp(n);',
 	GenericTypes => ['D'],
-	CHeader => qq{#include "gauss.c"\n},
 	Code => '
 	  int i, nb;
           double ymax, xmax, xmin, val, xval, xcenguess, bkg, par[NPAR], a[NPAR][NPAR];

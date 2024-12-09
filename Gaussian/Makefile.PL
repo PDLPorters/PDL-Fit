@@ -4,8 +4,7 @@ use ExtUtils::MakeMaker;
 
 my @pack = (["gaussian.pd", qw(Gaussian PDL::Fit::Gaussian)]);
 my %hash = pdlpp_stdargs(@pack);
-$hash{OBJECT} .= ' ';
-$hash{DEFINE} .= ' ';
+$hash{OBJECT} .= ' gauss$(OBJ_EXT)';
 $hash{LIBS} = ['-lm'] unless $^O =~ /MSWin/;
 
 undef &MY::postamble; # suppress warning

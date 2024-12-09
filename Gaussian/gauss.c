@@ -17,6 +17,7 @@
 
 #include <stdio.h>
 #include <math.h>
+#include <stdlib.h>
 
 #define NPAR 3
 #define MAXITER 1000
@@ -274,7 +275,7 @@ static void lineq (int n, int ndim, double x[NPAR][NPAR], double b[NPAR],
 */
     
     
-static int marquardt (int npoints, int npar, double*x, double *y,
+int marquardt (int npoints, int npar, double*x, double *y,
 		      double* sig, double par[NPAR], double* r,
 		      double a[NPAR][NPAR])
 {
@@ -437,7 +438,7 @@ static int marquardt (int npoints, int npar, double*x, double *y,
 }
 
 /* qsort doubles */
-static void lqsortD (double* xx, int a, int b)
+void lqsortD (double* xx, int a, int b)
 {
    int i,j;
 	
