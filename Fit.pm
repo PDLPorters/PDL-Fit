@@ -1,9 +1,9 @@
-package PDL::GSL;
+package PDL::Fit;
 
 use strict;
 use warnings;
 
-our $VERSION = '2.096';
+our $VERSION = '2.097';
 
 =head1 NAME
 
