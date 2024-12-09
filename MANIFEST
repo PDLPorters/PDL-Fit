@@ -1,0 +1,15 @@
+Changes
+examples/lmfit.pl
+Gaussian/gauss.c
+Gaussian/gaussian.pd
+Gaussian/Makefile.PL
+Gaussian/t/gauss.t
+Linfit.pm
+LM.pm
+Makefile.PL
+MANIFEST			This list of files
+MANIFEST.SKIP
+Polynomial.pm
+t/linfit.t
+t/lm.t
+t/poly.t
