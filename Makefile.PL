@@ -5,5 +5,6 @@ use PDL::Core::Dev;
 
 WriteMakefile(
   NAME => 'PDL::Fit',
-  PM => { map {($_ => '$(INST_LIBDIR)/Fit/'.$_)} <*.pm> },
+  VERSION_FROM => 'Fit.pm',
+  PM => { map {($_ => '$(INST_LIBDIR)/Fit/'.$_)} <[LP]*.pm> },
 );

@@ -1,5 +1,6 @@
 Changes
 examples/lmfit.pl
+Fit.pm
 Gaussian/gauss.c
 Gaussian/gaussian.pd
 Gaussian/Makefile.PL
